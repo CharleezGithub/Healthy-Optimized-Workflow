@@ -17,22 +17,22 @@ fn main() {
     println!("Welcome back sir.");
 
     loop {
-        sleep(Duration::from_secs(600));
-        Notification::new()
+        if count1 != 2 || count1 != 4 || count1 != 6{
+            sleep(Duration::from_secs(600));
+            Notification::new()
             .summary("Straighten your back")
-            .body("You seen these coders and their turtle neck. Be different and have a good posture!")
-            .timeout(Timeout::Milliseconds(10000))
-            .show()
-            .unwrap();
+                .body("You seen these coders and their turtle neck. Be different and have a good posture!")
+                .timeout(Timeout::Milliseconds(10000))
+                .show()
+                .unwrap();
 
-        println!("Straighten your back");
-
-        count1 += 1;
+            println!("Straighten your back");
+        }
 
         if count1 == 2 || count1 == 4 {
             Notification::new()
-                .summary("Take a glass of water")
-                .body("Staying hydrated is a good way to both clear your mind and stay in the game. So do it!")
+            .summary("Take a glass of water")
+            .body("Staying hydrated is a good way to both clear your mind and stay in the game. So do it!")
                 .timeout(Timeout::Milliseconds(10000))
                 .show()
                 .unwrap();
@@ -52,5 +52,6 @@ fn main() {
 
             println!("Take a quick rest. (5 to 15 minutes)");
         }
+        count1 += 1;
     }
 }
