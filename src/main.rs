@@ -17,8 +17,9 @@ fn main() {
     println!("Welcome back sir.");
 
     loop {
-        if count1 != 2 || count1 != 4 || count1 != 6{
-            sleep(Duration::from_secs(600));
+        sleep(Duration::from_secs(600));
+        
+        if count1 != 2 || count1 != 4 || count1 != 6 {
             Notification::new()
             .summary("Straighten your back")
                 .body("You seen these coders and their turtle neck. Be different and have a good posture!")
