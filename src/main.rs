@@ -1,3 +1,9 @@
+/*
+extern crate iui;
+use iui::controls::{Button, Group, Label, VerticalBox};
+use iui::prelude::*;
+*/
+
 use std::thread::sleep;
 use std::time::Duration;
 
@@ -6,6 +12,7 @@ use notify_rust::Timeout;
 
 fn main() {
     let mut count1 = 0;
+    let mut time_in_seconds = 0;
 
     Notification::new()
         .summary("Welcome back sir.")
@@ -16,9 +23,29 @@ fn main() {
 
     println!("Welcome back sir.");
 
+    /*
+    let ui = UI::init().expect("Failed to initialize UI");
+    let mut win = Window::new(&ui, "Test Window", 200, 200, WindowType::NoMenubar);
+
+        let mut vbox = VerticalBox::new(&ui);
+        vbox.set_padded(&ui, true);
+
+        let mut button = Button::new(&ui, "TestButton");
+        button.on_clicked(&ui, {
+            let ui = ui.clone();
+            move |btn| {
+                btn.set_text(&ui, "Clicked!");
+            }
+        });
+
+        win.set_child(&ui, &vbox);
+        win.show(&ui);
+        win.main();
+        */
+
     loop {
         sleep(Duration::from_secs(600));
-        
+
         if count1 != 2 || count1 != 4 || count1 != 6 {
             Notification::new()
             .summary("Straighten your back")

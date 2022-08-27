@@ -7,3 +7,4 @@ edition = "2021"
 
 [dependencies]
 notify-rust = "4.5.8"
+#iui = "0.3.0"
