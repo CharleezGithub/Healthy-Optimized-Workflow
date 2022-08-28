@@ -10,6 +10,8 @@ use std::time::Duration;
 use notify_rust::Notification;
 use notify_rust::Timeout;
 
+
+
 fn main() {
     let mut count1 = 0;
     let mut time_in_seconds = 0;
@@ -22,7 +24,6 @@ fn main() {
         .unwrap();
 
     println!("Welcome back sir.");
-
     /*
     let ui = UI::init().expect("Failed to initialize UI");
     let mut win = Window::new(&ui, "Test Window", 200, 200, WindowType::NoMenubar);
@@ -68,18 +69,19 @@ fn main() {
             println!("Take a glass of water");
         }
 
+        count1 += 1;
+        
         if count1 >= 6 {
             Notification::new()
-                .summary("Take a quick rest. (5 to 15 minutes)")
-                .body("You need rest to always have a clear mind. So take one, you deserve it!")
-                .timeout(Timeout::Milliseconds(10000))
-                .show()
-                .unwrap();
-
+            .summary("Take a quick rest. (5 to 15 minutes)")
+            .body("You need rest to always have a clear mind. So take one, you deserve it!")
+            .timeout(Timeout::Milliseconds(10000))
+            .show()
+            .unwrap();
+            
             count1 = 0;
-
+            
             println!("Take a quick rest. (5 to 15 minutes)");
         }
-        count1 += 1;
     }
 }
