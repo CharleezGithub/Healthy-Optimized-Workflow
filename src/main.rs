@@ -14,7 +14,7 @@ use notify_rust::Timeout;
 
 fn main() {
     let mut count1 = 0;
-    let mut time_in_seconds = 0;
+    //let mut time_in_seconds = 0;
 
     Notification::new()
         .summary("Welcome back sir.")
