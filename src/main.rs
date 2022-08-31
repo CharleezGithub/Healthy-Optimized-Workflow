@@ -69,7 +69,6 @@ fn main() {
             println!("Take a glass of water");
         }
 
-        count1 += 1;
         
         if count1 >= 6 {
             Notification::new()
@@ -83,5 +82,6 @@ fn main() {
             
             println!("Take a quick rest. (5 to 15 minutes)");
         }
+        count1 += 1;
     }
 }
